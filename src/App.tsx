@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { BankId, TransferType } from "./components/types/types";
+import type  { BankId, TransferType } from "./components/types";
 import ProgressBar from "./components/ProgressBar";
 import Step1 from "./components/Step1";
 import Step2 from "./components/Step2";
@@ -10,7 +10,10 @@ function App() {
   const [step, setStep] = useState(1);
   const [transferType, setTransferType] = useState<TransferType>(null);
   const [selectedBank, setSelectedBank] = useState<BankId | null>(null);
-  const [accountNumber, setAccountNumber] = useState("");
+  // bank transfer
+  const [destinatario, setDestinatario] = useState("");
+  const [iban, setIban] = useState("");
+  // phone transfer
   const [phoneNumber, setPhoneNumber] = useState("");
   const [amount, setAmount] = useState("");
   const [showPreview, setShowPreview] = useState(false);
@@ -38,11 +41,13 @@ function App() {
           <Step2
             transferType={transferType}
             selectedBank={selectedBank}
-            accountNumber={accountNumber}
+            destinatario={destinatario}
+            iban={iban}
             phoneNumber={phoneNumber}
             amount={amount}
             onBankSelect={setSelectedBank}
-            onAccountNumberChange={setAccountNumber}
+            onDestinatarioChange={setDestinatario}
+            onIbanChange={setIban}
             onPhoneNumberChange={setPhoneNumber}
             onAmountChange={setAmount}
             onBack={() => setStep(1)}
@@ -54,7 +59,8 @@ function App() {
           <PreviewModal
             transferType={transferType}
             selectedBank={selectedBank}
-            accountNumber={accountNumber}
+            destinatario={destinatario}
+            iban={iban}
             phoneNumber={phoneNumber}
             amount={amount}
             onEdit={() => setShowPreview(false)}

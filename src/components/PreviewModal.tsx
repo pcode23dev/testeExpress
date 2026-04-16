@@ -3,18 +3,16 @@ import { FileText } from "lucide-react";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import Receipt from "./Receipt";
-import type { BankId, TransferType } from "./types/types";
-import { banks } from "./types/types";
-import {
-  getCurrentDateTime,
-  generateTransactionId,
-  generateFileName,
-} from "./types/utils";
+import type { BankId, TransferType } from "./types";
+
+import {banks } from "./types";
+import { getCurrentDateTime, generateTransactionId, generateFileName } from "./utils";
 
 interface PreviewModalProps {
   transferType: TransferType;
   selectedBank: BankId | null;
-  accountNumber: string;
+  destinatario: string;
+  iban: string;
   phoneNumber: string;
   amount: string;
   onEdit: () => void;
@@ -23,7 +21,8 @@ interface PreviewModalProps {
 export default function PreviewModal({
   transferType,
   selectedBank,
-  accountNumber,
+  destinatario,
+  iban,
   phoneNumber,
   amount,
   onEdit,
@@ -35,18 +34,15 @@ export default function PreviewModal({
 
   const handleExportPDF = async () => {
     if (!receiptRef.current) return;
-
     const canvas = await html2canvas(receiptRef.current, {
       scale: 2,
       backgroundColor: "#ffffff",
       logging: false,
     });
-
     const imgData = canvas.toDataURL("image/png");
     const pdf = new jsPDF("p", "mm", "a4");
     const imgWidth = 210;
     const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
     pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
     pdf.save(generateFileName());
   };
@@ -60,7 +56,8 @@ export default function PreviewModal({
           ref={receiptRef}
           bank={bank}
           transferType={transferType}
-          accountNumber={accountNumber}
+          destinatario={destinatario}
+          iban={iban}
           phoneNumber={phoneNumber}
           amount={amount}
           date={date}
@@ -70,9 +67,7 @@ export default function PreviewModal({
         />
 
         <div className="button-group">
-          <button className="btn-secondary" onClick={onEdit}>
-            Editar
-          </button>
+          <button className="btn-secondary" onClick={onEdit}>Editar</button>
           <button className="btn-primary" onClick={handleExportPDF}>
             <FileText size={20} /> Exportar PDF
           </button>

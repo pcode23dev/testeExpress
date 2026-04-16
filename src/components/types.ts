@@ -9,14 +9,6 @@ export interface Bank {
   slogan: string;
 }
 
-export interface FormData {
-  transferType: TransferType;
-  selectedBank: BankId | null;
-  accountNumber: string;
-  phoneNumber: string;
-  amount: string;
-}
-
 export const banks: Bank[] = [
   {
     id: "ATLANTICO",

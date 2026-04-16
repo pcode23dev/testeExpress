@@ -12,27 +12,16 @@ body {
   min-height: 100vh;
 }
 
-.app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+.app { min-height: 100vh; display: flex; flex-direction: column; }
 
 .app-header {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255,255,255,0.95);
   padding: 2rem;
   text-align: center;
   box-shadow: 0 2px 20px rgba(0,0,0,0.1);
 }
-
-.app-header h1 {
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-.app-header p {
-  color: #666;
-}
+.app-header h1 { color: #333; margin-bottom: 0.5rem; }
+.app-header p  { color: #666; }
 
 .app-main {
   flex: 1;
@@ -43,7 +32,7 @@ body {
 }
 
 .app-footer {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255,255,255,0.9);
   padding: 1rem;
   text-align: center;
   color: #666;
@@ -59,20 +48,11 @@ body {
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
-
 .progress-bar .step {
-  flex: 1;
-  text-align: center;
-  padding: 0.5rem;
-  color: #999;
-  font-weight: 500;
-  position: relative;
+  flex: 1; text-align: center; padding: 0.5rem;
+  color: #999; font-weight: 500; position: relative;
 }
-
-.progress-bar .step.active {
-  color: #667eea;
-  font-weight: bold;
-}
+.progress-bar .step.active { color: #667eea; font-weight: bold; }
 
 /* ── Steps ── */
 .step-container {
@@ -81,12 +61,7 @@ body {
   border-radius: 15px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.1);
 }
-
-.step-container h2 {
-  margin-bottom: 1.5rem;
-  color: #333;
-  text-align: center;
-}
+.step-container h2 { margin-bottom: 1.5rem; color: #333; text-align: center; }
 
 .options-grid {
   display: grid;
@@ -108,40 +83,14 @@ body {
   align-items: center;
   gap: 1rem;
 }
-
-.option-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  border-color: #667eea;
-}
-
-.option-card.selected {
-  background: #667eea;
-  color: white;
-  border-color: #667eea;
-}
-
-.option-card span {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.option-card p {
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
+.option-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.15); border-color: #667eea; }
+.option-card.selected { background: #667eea; color: white; border-color: #667eea; }
+.option-card span { font-size: 1.2rem; font-weight: bold; }
+.option-card p    { font-size: 0.9rem; opacity: 0.8; }
 
 /* ── Form ── */
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: #555;
-  font-weight: 600;
-}
+.form-group { margin-bottom: 1.5rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; color: #555; font-weight: 600; }
 
 .input-field {
   width: 100%;
@@ -151,18 +100,10 @@ body {
   font-size: 1rem;
   transition: border-color 0.3s;
 }
-
-.input-field:focus {
-  outline: none;
-  border-color: #667eea;
-}
+.input-field:focus { outline: none; border-color: #667eea; }
 
 /* ── Banks Grid ── */
-.banks-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
+.banks-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
 
 .bank-card {
   background: white;
@@ -174,55 +115,22 @@ body {
   transition: all 0.3s;
   position: relative;
 }
-
-.bank-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-
-.bank-card.selected {
-  border-width: 3px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-}
+.bank-card:hover  { transform: scale(1.05); box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+.bank-card.selected { border-width: 3px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); }
 
 .bank-logo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-  font-size: 1.5rem;
+  width: 50px; height: 50px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-weight: bold; font-size: 1.5rem;
   margin: 0 auto 0.5rem;
 }
-
-.bank-card span {
-  font-size: 0.85rem;
-  color: #666;
-  display: block;
-  line-height: 1.2;
-  font-weight: 600;
-}
-
-.check-icon {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  color: #22c55e;
-}
+.bank-card span { font-size: 0.85rem; color: #666; display: block; line-height: 1.2; font-weight: 600; }
+.check-icon { position: absolute; top: 5px; right: 5px; color: #22c55e; }
 
 /* ── Buttons ── */
-.button-group {
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
-  justify-content: center;
-}
+.button-group { display: flex; gap: 1rem; margin-top: 2rem; justify-content: center; }
 
-.btn-primary,
-.btn-secondary {
+.btn-primary, .btn-secondary {
   padding: 1rem 2rem;
   border-radius: 10px;
   font-size: 1rem;
@@ -234,63 +142,24 @@ body {
   gap: 0.5rem;
   border: none;
 }
-
-.btn-primary {
-  background: #667eea;
-  color: white;
-}
-
-.btn-primary:hover:not(:disabled) {
-  background: #5568d3;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
-}
-
-.btn-primary:disabled {
-  background: #ccc;
-  cursor: not-allowed;
-}
-
-.btn-secondary {
-  background: #f0f0f0;
-  color: #666;
-}
-
-.btn-secondary:hover {
-  background: #e0e0e0;
-}
+.btn-primary { background: #667eea; color: white; }
+.btn-primary:hover:not(:disabled) { background: #5568d3; transform: translateY(-2px); box-shadow: 0 5px 20px rgba(102,126,234,0.4); }
+.btn-primary:disabled { background: #ccc; cursor: not-allowed; }
+.btn-secondary { background: #f0f0f0; color: #666; }
+.btn-secondary:hover { background: #e0e0e0; }
 
 /* ── Preview Overlay ── */
 .preview-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0,0,0,0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  padding: 2rem;
-  overflow-y: auto;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000; padding: 2rem; overflow-y: auto;
 }
-
 .preview-modal {
-  background: white;
-  border-radius: 20px;
-  padding: 2rem;
-  max-width: 650px;
-  width: 100%;
-  max-height: 95vh;
-  overflow-y: auto;
+  background: white; border-radius: 20px; padding: 2rem;
+  max-width: 650px; width: 100%; max-height: 95vh; overflow-y: auto;
 }
-
-.preview-modal h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #333;
-}
+.preview-modal h2 { text-align: center; margin-bottom: 1.5rem; color: #333; }
 
 /* ── Receipt / PDF ── */
 .receipt-container {
@@ -300,7 +169,7 @@ body {
   max-width: 600px;
   margin: 0 auto;
   font-family: 'Arial', sans-serif;
-  font-size: 12px; /* base reduzida */
+  font-size: 12px;
   color: #000;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
@@ -316,190 +185,133 @@ body {
   font-size: 8px;
   color: #333;
   line-height: 1.4;
-  text-align: left;
 }
 
-.bank-logo-area {
-  text-align: right;
-}
+.bank-logo-area { text-align: right; }
 
-.bai-logo {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  color: #C41E3A;
-  font-weight: bold;
-  font-size: 20px; /* era 28px */
-}
-
-.bai-logo .globe {
-  font-size: 18px; /* era 24px */
-}
-
+/* Atlântico logo - matches the PDF exactly */
 .atlantico-logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   color: #0099CC;
 }
-
 .atlantico-logo .symbol {
-  font-size: 22px; /* era 32px */
+  font-size: 20px;
   color: #0099CC;
 }
-
 .atlantico-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-
 .atlantico-text span {
-  font-size: 14px; /* era 20px */
+  font-size: 14px;
   font-weight: bold;
   color: #0099CC;
   letter-spacing: 1px;
 }
-
 .atlantico-text small {
-  font-size: 7px; /* era 8px */
+  font-size: 7px;
   color: #0099CC;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
 
-.generic-logo {
-  font-size: 16px; /* era 24px */
-  font-weight: bold;
+.bai-logo {
+  display: flex; align-items: center; gap: 5px;
+  color: #C41E3A; font-weight: bold; font-size: 20px;
 }
+.bai-logo .globe { font-size: 18px; }
 
+.generic-logo { font-size: 16px; font-weight: bold; }
+
+/* Title */
 .receipt-title {
   text-align: center;
   color: #C41E3A;
-  font-size: 16px; /* era 24px */
+  font-size: 16px;
   font-weight: normal;
-  margin: 20px 0 15px; /* era 30px 0 20px */
+  margin: 20px 0 15px;
   font-family: 'Times New Roman', serif;
 }
 
 .separator-line {
   height: 3px;
   background: #ddd;
-  margin: 15px 0; /* era 20px */
+  margin: 15px 0;
   border-radius: 2px;
 }
 
 .receipt-subtitle {
   text-align: center;
-  font-size: 11px; /* era 14px */
+  font-size: 11px;
   color: #333;
-  margin-bottom: 25px; /* era 40px */
+  margin-bottom: 25px;
   font-style: italic;
 }
 
+/* Data table with red vertical line */
 .data-table {
-  margin: 20px 0; /* era 30px */
+  margin: 20px 0;
   position: relative;
 }
-
 .data-table::before {
   content: '';
   position: absolute;
-  left: 35%;
-  top: 0;
-  bottom: 0;
+  left: 35%; top: 0; bottom: 0;
   width: 2px;
   background: #C41E3A;
 }
 
 .data-row {
   display: flex;
-  padding: 6px 0; /* era 8px */
-  font-size: 11px; /* era 13px */
+  padding: 6px 0;
+  font-size: 11px;
   align-items: center;
 }
-
 .data-row .label {
-  width: 35%;
-  text-align: right;
-  padding-right: 20px;
-  font-weight: bold;
-  color: #000;
+  width: 35%; text-align: right; padding-right: 20px;
+  font-weight: bold; color: #000;
 }
-
 .data-row .value {
-  width: 65%;
-  padding-left: 20px;
-  color: #000;
-  font-weight: normal;
+  width: 65%; padding-left: 20px;
+  color: #000; font-weight: normal;
 }
 
-.spacer {
-  height: 30px; /* era 60px */
-}
+.spacer { height: 30px; }
 
 .bank-slogan {
   text-align: center;
-  margin: 20px 0; /* era 30px */
-  font-size: 11px; /* era 14px */
+  margin: 20px 0;
+  font-size: 11px;
   color: #333;
   line-height: 1.6;
 }
 
+/* Footer */
 .receipt-footer-pdf {
   background: #d4d4c8;
-  padding: 12px; /* era 15px */
+  padding: 12px;
   margin: 0 10px -40px 10px;
   text-align: center;
 }
-
 .support-text {
-  font-size: 9px; /* era 11px */
-  color: #333;
-  line-height: 1.4;
-  margin-bottom: 8px; /* era 10px */
+  font-size: 9px; color: #333; line-height: 1.4; margin-bottom: 8px;
 }
-
 .footer-line {
-  height: 1px;
-  background: #999;
-  margin: 8px 20px; /* era 10px */
+  height: 1px; background: #999; margin: 8px 20px;
 }
-
 .account-info {
-  font-size: 9px; /* era 11px */
-  color: #333;
-  font-family: monospace;
+  font-size: 9px; color: #333; font-family: monospace;
 }
 
 /* ── Responsive ── */
 @media (max-width: 600px) {
-  .options-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .banks-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .app-main {
-    padding: 1rem;
-  }
-
-  .receipt-container {
-    padding: 20px;
-  }
-
-  .data-table::before {
-    left: 40%;
-  }
-
-  .data-row .label {
-    width: 40%;
-    font-size: 10px;
-  }
-
-  .data-row .value {
-    width: 60%;
-    font-size: 10px;
-  }
+  .options-grid      { grid-template-columns: 1fr; }
+  .banks-grid        { grid-template-columns: repeat(2,1fr); }
+  .app-main          { padding: 1rem; }
+  .receipt-container { padding: 20px; }
+  .data-table::before { left: 40%; }
+  .data-row .label   { width: 40%; font-size: 10px; }
+  .data-row .value   { width: 60%; font-size: 10px; }
 }

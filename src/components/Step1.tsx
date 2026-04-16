@@ -1,5 +1,5 @@
 import { Building2, Smartphone } from "lucide-react";
-import type { TransferType } from "./types/types";
+import type { TransferType } from "./types";
 
 interface Step1Props {
   transferType: TransferType;
